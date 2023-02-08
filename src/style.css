@@ -1,0 +1,80 @@
+:root {
+    --bg: #0F1221;
+    --main: #155CDD;
+    --headandnav: #6486B2;
+    --accent: #AA989F;
+    font-family: Arial;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: grid;
+    grid-template-areas:
+      'input input'
+      'nav view';
+    grid-template-columns: 20% auto;
+    grid-auto-rows: min-content;
+    background-color: var(--bg);
+    color: var(--accent);
+}
+
+h2 {
+    font-size: 1.1rem;
+    margin: 0.1rem;
+}
+
+.navbar {
+    background: var(--headandnav);
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0% 0% 5% 5%;
+}
+
+.new-project-form {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: 1rem;
+}
+
+.new-project-form > input {
+    max-width: 120px;
+}
+
+
+.input-form {
+    background-color: var(--headandnav);
+    color: var(--bg);
+    padding: 0.5rem;
+    grid-area: input;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    border-radius: 0% 5% 5% 0%;
+    padding-right: 2rem;
+}
+
+.note-view {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px;
+    grid-auto-columns: 300px;
+    grid-area: view;
+    gap: 16px;
+    padding: 0.1rem;
+}
+
+.note {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    word-wrap: break-word;
+    max-width: 300px;
+    border-radius: 5%;
+    background-color: var(--accent);
+    color: black;
+    margin: 0.5rem;
+}
